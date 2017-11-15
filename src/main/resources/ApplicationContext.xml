@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="subaru"
+          class="com.springtest.Subaru" >
+        <constructor-arg index="0" value="white"/>
+        <constructor-arg index="1" value="4"/>
+        <constructor-arg index="2" value="3.0"/>
+        <property name="driver" ref="driverSubaru"/>
+    </bean>
+
+    <bean id="toyota"
+          class="com.springtest.Toyota">
+
+        <constructor-arg index="0" value="black"/>
+        <constructor-arg index="1" value="4"/>
+        <constructor-arg index="2" value="2.5"/>
+        <property name="driver" ref="driverToyota"/>
+    </bean>
+    <bean id="driverSubaru" class="com.springtest.Driver">
+        <constructor-arg index="0" value="Vasia"/>
+        <constructor-arg index="1" value="41"/>
+    </bean>
+    <bean id="driverToyota" class="com.springtest.Driver">
+        <constructor-arg index="0" value="Sasha"/>
+        <constructor-arg index="1" value="32"/>
+    </bean>
+</beans>
